@@ -15,19 +15,46 @@ void Desenha(void)
      // Limpa a janela de visualização com a cor de fundo especificada
      glClear(GL_COLOR_BUFFER_BIT);
 
-     // Especifica que a cor corrente é vermelha RGB
-     glColor3f(1.0f, 0.0f, 0.0f);
+    // Desenha os eixos
+     glColor3f(1, 1, 0);
+     glLineWidth(3);
+     glBegin(GL_LINES);
+        glVertex3f(-100, 0, 0);
+        glVertex3f(100, 0, 0);
+        glVertex3f(0, -100, 0);
+        glVertex3f(0, 100, 0);
+    glEnd();
 
-	 // Especifica o tamanho do ponto
-	 glPointSize(4.0f);
-
-     incremento = (2 * M_PI) / 7; // 7 é o número de vértices
-
+    // Especifica que a cor corrente é vermelha RGB - função 1
+     glColor3f(0.0f, 0.0f, 1.0f);
+     glLineWidth(2);
      // Desenha um círculo de pontos
-     glBegin(GL_POINTS);
-     for(angulo=0; angulo<2*M_PI; angulo+=incremento){
-        glVertex2f(20*cos(angulo),20*sin(angulo));
-     }
+     glBegin(GL_LINE_STRIP);
+        glVertex2f(-3, 15);
+        glVertex2f(-2, 8);
+        glVertex2f(-1, 3);
+        glVertex2f(0, 0);
+        glVertex2f(1, -1);
+        glVertex2f(2, 0);
+        glVertex2f(3, 3);
+        glVertex2f(4, 8);
+     glEnd();
+
+     // Especifica que a cor corrente é vermelha RGB - função 2
+     glColor3f(1.0f, 0.0f, 0.0f);
+     glLineWidth(2);
+     // Desenha um círculo de pontos
+     glBegin(GL_LINE_STRIP);
+        glVertex2f(-3, -18);
+        glVertex2f(-2, -10);
+        glVertex2f(-1, -4);
+        glVertex2f(0, 0);
+        glVertex2f(1, 2);
+        glVertex2f(2, 2);
+        glVertex2f(3, 0);
+        glVertex2f(4, -4);
+        glVertex2f(5, -10);
+        glVertex2f(6, -18);
      glEnd();
 
      // Executa os comandos OpenGL
@@ -86,7 +113,7 @@ int main(int argc, char *argv[])
     // Especifica o tamanho e localização inicial em pixels da janela GLUT
 	glutInitWindowSize(400,400);
 	// Cria a janela passando como argumento o título da mesma
-	glutCreateWindow("Projeto 01");
+	glutCreateWindow("Exercício 02");
 	// Registra a função callback de redesenho da janela de visualização
 	glutDisplayFunc(Desenha);
 	// Registra a função callback de redimensionamento da janela de visualização

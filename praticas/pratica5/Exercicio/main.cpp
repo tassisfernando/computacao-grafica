@@ -48,6 +48,7 @@ bool pausado = false;
 
 // controle do mouse
 GLfloat xf, yf, win;
+GLsizei largura, altura;
 
 void DesenhaCirculo(int nVertices, GLfloat red, GLfloat green, GLfloat blue)
 {
@@ -223,6 +224,7 @@ void Inicializa (void)
 	maxY =  17.0f;
 	windowXmin = windowYmin = -40.0f;
 	windowXmax = windowYmax = 40.0f;
+    win = 250.0f;
 }
 
 

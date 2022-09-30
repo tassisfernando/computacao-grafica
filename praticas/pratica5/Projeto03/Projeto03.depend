@@ -874,3 +874,8 @@
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glu.h
 	<GL/gl.h>
 
+1663899362 source:c:\users\dpcdti\workspace-pessoal\cefet\8_semestre\cg\praticas\praticas\pratica5\projeto03\main.cpp
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<stdlib.h>
+
